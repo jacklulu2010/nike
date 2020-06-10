@@ -11,15 +11,17 @@ public class Test {
 
     public static void main(String[] args) {
         // 登陆 Url
-        String loginUrl = "http://manage.sddpf.org.cn/sdcl_ywjb/login.do";
+        String loginUrl = "https://unite.nike.com/login";
         // 需登陆后访问的 Url
         String dataUrl = "http://manage.sddpf.org.cn/sdcl_ywjb/welcome.html";
         HttpClient httpClient = new HttpClient();
         PostMethod postMethod = new PostMethod(loginUrl);
         NameValuePair[] data = {
-                new NameValuePair("username", "admin1111"),
+                new NameValuePair("username", "+8613521328053"),
                 new NameValuePair("password", "sdcl2019!"),
-                new NameValuePair("captcha", "TE96!")
+                new NameValuePair("client_id", "HlHa2Cje3ctlaOqnxvgZXNaAs7T9nAuH"),
+                new NameValuePair("grant_type", "password"),
+                new NameValuePair("ux_id", "com.stingyog.nike.commerce.nikedotcom.web")
         };
         postMethod.setRequestBody(data);
 
